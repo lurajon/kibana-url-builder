@@ -29,13 +29,14 @@ const url = kub.buildDiscoverUrl({
 
 ### Methods
 
-**`buildDiscoverUrl ({ host, refreshInterval, period, columns, filters, index, interval, query, sort }: KibanaDiscoverUrlBuildParameters): string`**
+**`buildDiscoverUrl ({ host, discoveryId, refreshInterval, period, columns, filters, index, interval, query, sort }: KibanaDiscoverUrlBuildParameters): string`**
 
 This method returns a stateless Kibana "Discover" URL, which can be shared and used by anyone having access to the Kibana instance.
 
 | Parameter | Type | Default | Required | Example |
 |---|---|---|---|---|
 | `host` | `string` | | ✅ | `http://kibana:5601` |
+| `discoveryId` | `string` | | `9a0b4094-bf81-4de9-a3e7-26d8bb822476` |
 | `columns` | `string[]` | `['_source']` | | `['_source', 'log']` |
 | `filters` | `KibanaQueryFilter[]` | `[]` | | See below |
 | `query` | `string` | | | `foo AND bar` (Lucene syntax) |
