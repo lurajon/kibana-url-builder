@@ -1,5 +1,5 @@
 {
-  "name": "@clickandmortar/kibana-url-builder",
+  "name": "@lurajon/kibana-url-builder",
   "version": "0.7.2",
   "description": "Kibana URL builder",
   "scripts": {

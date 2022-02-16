@@ -7,7 +7,7 @@ const defaultPeriod: types.KibanaQueryPeriod = {
   to: 'now'
 }
 
-export function buildDiscoverUrl ({ host, refreshInterval, period, columns, filters, index, interval, query, sort }: types.KibanaDiscoverUrlBuildParameters): string {
+export function buildDiscoverUrl ({ host, discoveryId, refreshInterval, period, columns, filters, index, interval, query, sort }: types.KibanaDiscoverUrlBuildParameters): string {
   if (!columns || columns.length === 0) {
     columns = ['_source']
   }
@@ -120,5 +120,6 @@ export function buildDiscoverUrl ({ host, refreshInterval, period, columns, filt
     query: query ?? ''
   }
 
-  return `${host.replace(/\/$/, '')}/app/kibana#/discover?_g=${rison.encode(_g)}&_a=${rison.encode(_a)}`
+  const discoverurl = discoveryId ? `/${discoveryId}` : ''
+  return `${host.replace(/\/$/, '')}/app/kibana#/discover${discoverurl}?_g=${rison.encode(_g)}&_a=${rison.encode(_a)}`
 }

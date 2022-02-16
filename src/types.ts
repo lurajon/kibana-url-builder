@@ -25,6 +25,7 @@ export interface KibanaQuerySort {
 
 export interface KibanaDiscoverUrlBuildParameters {
   host: string;
+  discoveryId?: string;
   refreshInterval?: KibanaQueryRefreshInterval;
   period?: KibanaQueryPeriod;
   columns?: string[];
