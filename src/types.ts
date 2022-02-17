@@ -10,7 +10,7 @@ export interface KibanaQueryPeriod {
 }
 
 export interface KibanaQueryFilter {
-  type: 'exists' | 'query' | 'phrases' | 'range';
+  type: 'exists' | 'query' | 'phrases' | 'range' | 'phrase';
   field: string;
   value?: string|boolean|number|string[]; // Required for query and phrases
   negate: boolean;
