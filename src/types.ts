@@ -31,6 +31,7 @@ export interface KibanaDiscoverUrlBuildParameters {
   columns?: string[];
   filters: KibanaQueryFilter[];
   index?: string;
+  indexId?: string;
   interval?: string;
   query?: string;
   sort?: KibanaQuerySort;
